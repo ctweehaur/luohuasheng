@@ -1,20 +1,18 @@
 // ==========================================================================
-// 📝 《落花生》综合练习题库 (questions.js) - 马来西亚 UASA/KSSM 本地考卷标准版
-// 甲组：客观选择题（10题，含引文框、I/II/III/IV组合题、排序题、修辞作用题）
-// 乙组：主观简答题（15分制，含 [1分]/[2分] 采分点、KBAT题及随文语文知识题）
+// 📝 《落花生》综合练习题库 (questions.js) - 画线词醒目下划线修复版
 // ==========================================================================
 
 const PT = (pts) => `<span style="display:inline-block; background:var(--primary-color); color:#fff; font-size:11px; font-weight:800; padding:0 5px; margin:0 3px; border-radius:4px;">[${pts}分]</span>`;
 
 const QUOTE_BOX = (text) => `<div style="margin:6px 0 10px 0; padding:8px 12px; background:var(--notebook-bg); border-left:3px solid var(--primary-color); border-radius:4px; font-weight:600; font-size:14.5px; color:var(--text-color); line-height:1.65;">${text}</div>`;
 
-// ==========================================================================
-// 甲组：现代文理解客观题（10分，每题1分）
-// ==========================================================================
+const HL = (text) => `<u style="text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; color:var(--primary-color); font-weight:800;">${text}</u>`;
+
+// 甲组：现代文理解客观题（10分）
 const quizDataList = [
     {
         id: 1,
-        question: `${QUOTE_BOX("买种底买种，动土底动土，灌园底灌园；过不了几个月，居然收获了！")}上面第1段的句子采用了什么修辞手法？句中的“居然”表现了什么心情？`,
+        question: `${QUOTE_BOX(`买种底买种，动土底动土，灌园底灌园；过不了几个月，${HL("居然")}收获了！`)}上面第1段的句子采用了什么修辞手法？句中画线的“${HL("居然")}”表现了什么心情？`,
         options: [
             "A 比拟；觉得种花生太辛苦，暗含抱怨之意。",
             "B 排比；初次种豆就获丰收，充满惊喜之情。",
@@ -38,7 +36,7 @@ const quizDataList = [
     },
     {
         id: 3,
-        question: "在第6段至第9段中，家人们提到了花生的哪些好处或可贵之处？<br><span style='font-weight:600; font-size:14px; display:inline-block; margin-top:6px; line-height:1.7;'>I 气味很美，且可以拿来制油<br>II 价格低廉，无论何等人都买得起、爱吃它<br>III 花朵艳丽芳香，可以采摘下来装饰客厅<br>IV 果实深埋地底，成熟后才容人挖出，不炫耀外表</span>",
+        question: "在第6段至第9段中，家人们提到了花生的哪些好处或可贵之处？<br><span style='font-weight:500; font-size:14px; display:inline-block; margin-top:6px; line-height:1.7;'>I 气味很美，且可以拿来制油<br>II 价格低廉，无论何等人都买得起、爱吃它<br>III 花朵艳丽芳香，可以采摘下来装饰客厅<br>IV 果实深埋地底，成熟后才容人挖出，不炫耀外表</span>",
         options: [
             "A I、II 和 III",
             "B I、II 和 IV",
@@ -50,7 +48,7 @@ const quizDataList = [
     },
     {
         id: 4,
-        question: "全文围绕“落花生”展开叙事，请按文章先后顺序排列以下四个核心环节。<br><span style='font-weight:600; font-size:14px; display:inline-block; margin-top:6px; line-height:1.7;'>I 茅亭议花生 &nbsp;&nbsp;&nbsp;&nbsp; II 辟地种花生 &nbsp;&nbsp;&nbsp;&nbsp; III 铭记父教诲 &nbsp;&nbsp;&nbsp;&nbsp; IV 准备收获节</span>",
+        question: "全文围绕“落花生”展开叙事，请按文章先后顺序排列以下四个核心环节。<br><span style='font-weight:500; font-size:14px; display:inline-block; margin-top:6px; line-height:1.7;'>I 茅亭议花生 &nbsp;&nbsp;&nbsp;&nbsp; II 辟地种花生 &nbsp;&nbsp;&nbsp;&nbsp; III 铭记父教诲 &nbsp;&nbsp;&nbsp;&nbsp; IV 准备收获节</span>",
         options: [
             "A II → IV → I → III",
             "B II → I → IV → III",
@@ -62,9 +60,9 @@ const quizDataList = [
     },
     {
         id: 5,
-        question: `${QUOTE_BOX("你们偶然看见一棵花生瑟缩地长在地上，不能立刻辨出它有没有果实，非得等到你接触它才能知道。")}第9段中“瑟缩”一词采用了什么修辞手法？有什么表达效果？`,
+        question: `${QUOTE_BOX(`你们偶然看见一棵花生${HL("瑟缩")}地长在地上，不能立刻辨出它有没有果实，非得等到你接触它才能知道。`)}第9段中画线的“${HL("瑟缩")}”一词采用了什么修辞手法？有什么表达效果？`,
         options: [
-            "A 比喻，说明天气寒冷導致花生枝叶被冻得枯萎。",
+            "A 比喻，说明天气寒冷导致花生枝叶被冻得枯萎。",
             "B 夸张，贬低花生植株矮小，不如桃树石榴树挺拔。",
             "C 比拟，描绘花生贴地生长，烘托其低调内敛的品格。",
             "D 借代，暗示后园土地贫瘠，花生缺乏充足的养分。"
@@ -74,7 +72,7 @@ const quizDataList = [
     },
     {
         id: 6,
-        question: `${QUOTE_BOX("那么人要做有用的人，不要做伟大、体面的人了。")}在第10段中，“我”所说的“体面的人”在语境中指的是怎样的人？`,
+        question: `${QUOTE_BOX(`那么人要做有用的人，不要做伟大、${HL("体面")}的人了。`)}在第10段中，“我”所说的画线词“${HL("体面")}”在语境中指的是怎样的人？`,
         options: [
             "A 衣着整洁干净、举止礼貌得体的人。",
             "B 地位显赫尊贵、深受百姓爱戴的人。",
@@ -134,9 +132,7 @@ const quizDataList = [
     }
 ];
 
-// ==========================================================================
 // 乙组：现代文理解简答题（15分制 + 随文语文知识训练）
-// ==========================================================================
 const essayDataList = [
     {
         id: 1,
@@ -152,7 +148,7 @@ const essayDataList = [
     },
     {
         id: 3,
-        question: `${QUOTE_BOX("人要做有用的人，不要做伟大、体面的人了。")}（三）结合第10段，试解释上面句子中“有用的人”和“伟大、体面的人”分别指怎样的人？ <span style="color:var(--primary-color);">[4分]</span>`,
+        question: `${QUOTE_BOX(`人要做${HL("有用的人")}，不要做${HL("伟大、体面的人")}了。`)}（三）结合第10段，试解释上面句子中画线的“${HL("有用的人")}”和“${HL("伟大、体面的人")}”分别指怎样的人？ <span style="color:var(--primary-color);">[4分]</span>`,
         sampleAnswer: `“有用的人”指的是像落花生一样，虽然外表平凡朴实、不慕虚名，却能脚踏实地、默默为他人和社会做出实际贡献的人${PT(2)}。<br>“伟大、体面的人”在这里指的是那些只讲究外表光鲜亮丽、贪图排场虚荣，实际上却对社会毫无益处的人${PT(2)}。`,
         teacherAnalysis: "<strong>【核心主旨句诠释题】</strong>参照第10段。分别紧扣文本寓意解释两类人的特征（各2分）。"
     },
@@ -165,10 +161,12 @@ const essayDataList = [
     {
         id: 5,
         question: `（五）<strong>【随文语文知识训练】</strong>阅读下面的句子，完成第 a 至 d 小题： <span style="color:var(--primary-color);">[附加4分]</span><br>` +
-                  `a. “过不了几个月，<strong>居然</strong>收获了！”——写出画线词语的<strong>词性</strong>。<br>` +
+                  `<div style="font-weight:500; margin-top:8px; line-height:1.9;">` +
+                  `a. “过不了几个月，${HL("居然")}收获了！”——写出画线词语的<strong>词性</strong>。<br>` +
                   `b. “这小小的豆不像那好看的苹果、桃子、石榴，把它们底果实悬在枝上，鲜红嫩绿的颜色……”——写出句中的一个<strong>偏正短语</strong>。<br>` +
                   `c. “所有花生食品<strong>虽然</strong>没有了，<strong>然而</strong>父亲底话现在还印在我心版上。”——写出上面句子的<strong>复句类型</strong>。<br>` +
-                  `d. “你们爱吃花生么？”“爱！”——写出第3段与第4段这组父子问答构成的<strong>修辞手法</strong>（若合为一句看）。`,
+                  `d. “你们爱吃花生么？”“爱！”——写出第3段与第4段这组父子问答构成的<strong>修辞手法</strong>（若合为一句看）。` +
+                  `</div>`,
         sampleAnswer: `a. 词性：<strong>副词</strong>${PT(1)}<br>` +
                       `b. 偏正短语：<strong>小小的豆</strong>（或：好看的苹果 / 鲜红嫩绿的颜色）${PT(1)}<br>` +
                       `c. 复句类型：<strong>转折复句</strong>（标志关联词：“虽然……然而……”）${PT(1)}<br>` +
